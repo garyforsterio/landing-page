@@ -66,6 +66,12 @@ body {
     div.projects__container {
       justify-content: space-between;
     }
+    i.contact__icon {
+      font-size: 8vw;
+    }
+    p.contact__place {
+      font-size: 3vw;
+    }
 }
 
 .splash__subtitle {
@@ -161,7 +167,11 @@ body {
 }
 
 .contact__place {
-  font-size: 6vw;
+  font-size: 8vw;
+}
+
+.contact__icon {
+  font-size: 15vw;
 }
 
 .contact__via {
