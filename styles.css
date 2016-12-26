@@ -118,6 +118,17 @@ body {
 }
 
 /*Projects*/
+.project {
+  height: 60vw;
+  width: 60vw;
+  margin: 3vw;
+  padding: 5% 5%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: #028482 0.05px solid;
+  box-shadow: #028482 5px 5px 3px;
+}
+
 .projects__container {
   display: flex;
   justify-content: space-around;
@@ -141,19 +152,9 @@ body {
   font-size: 4vw;
 }
 
-.project {
-  color: white;
-  height: 60vw;
-  width: 60vw;
-  margin: 3vw;
-  padding: 5% 5%;
-  box-sizing: border-box;
-  background: #028482;
-  border-radius: 6px;
-}
 
 .project.project--speculative {
-  background: linear-gradient(#028482, white);
+  height: 12vw;
 }
 
 .project__logo {
