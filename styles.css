@@ -80,6 +80,12 @@ body {
     p.contact__place {
       font-size: 3vw;
     }
+    div.stack__block {
+      display: flex;
+    }
+    div.segment__container {
+      font-size: initial;
+    }
 }
 
 .splash__subtitle {
@@ -119,6 +125,45 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*Stack*/
+.stack__block {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.segment {
+    flex: 1;
+    margin-right: 1vw;
+}
+.segment--open .segment__caret {
+  transform: none;
+}
+.segment--open .segment__container {
+  display: block;
+}
+
+.segment__container {
+  font-size: 2.5vw;
+  display: none;
+}
+
+.segment__title {
+    font-size: 3vw;
+}
+
+.segment__caret {
+  transform: rotate(90deg);  
+  float: right;
+}
+
+
+.segment__list {
+    color: #028482;
+}
+.segment__list span {
+  color: initial;
 }
 
 /*Projects*/

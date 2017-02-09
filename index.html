@@ -18,6 +18,7 @@
     <base href="./">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./dist/prism.css">
 </head>
 
 <body>
@@ -81,14 +82,16 @@
                             <span class="segment__caret"> > </span>
                         </div>
                         <div class="segment__container">
-                            <ul class="segment__list">
-                                <li> JavaScript </li>
-                                <li> TypeScript </li>
-                                <li> Node.js </li>
-                                <li> Angular.js (v1 & v2+) </li>
-                                <li> Express.js </li>
-                                <li> D3, dc.js, Highcharts </li>
-                            </ul>
+<pre><code class="language-typescript">export class myKnowledge {
+  javaScript = es6;
+  typeScript: IExperienced;
+  node.js;
+  angular.js;
+  express.js;
+  charting() {
+    return [d3, dc.js, highcharts];
+  }
+}</code></pre>
                         </div>
                     </div>
                     <div class="segment segment--open">
@@ -97,12 +100,13 @@
                             <span class="segment__caret"> > </span>
                         </div>
                         <div class="segment__container">
-                            <ul class="segment__list">
-                                <li> HTML5 </li>
-                                <li> Pug (a.k.a. Jade) </li>
-                                <li> Markdown </li>
-                                <li> Flexbox </li>
-                            </ul>
+<pre><code class="language-markup">&lt;head>
+  &lt;skill> HTML5 &lt;/skill>
+  &lt;skill> Pug (a.k.a Jade) &lt;/skill>
+  &lt;skill> Markdown &lt;/skill>
+  &lt;skill> Flexbox &lt;/skill>
+&lt;/head>
+</code></pre>
                         </div>
                     </div>
                 </div>
@@ -112,14 +116,14 @@
                             Styling
                             <span class="segment__caret"> > </span>
                         </div>
-                        <div class="segment__container">
-                            <ul class="segment__list">
-                                <li> CSS3 </li>
-                                <li> Styus </li>
-                                <li> SCSS/SASS </li>
-                                <li> Bootstrap </li>
-                                <li> Material </li>
-                            </ul>
+                            <div class="segment__container">
+<pre><code class="language-css">.advanced__class {
+  css: base;
+  stylus: better;
+  scss: good;
+  bootstrap: essential;
+  material: winner
+}</code></pre>
                         </div>
                     </div>
                     <div class="segment segment--open">
@@ -128,10 +132,13 @@
                             <span class="segment__caret"> > </span>
                         </div>
                         <div class="segment__container">
-                            <ul class="segment__list">
-                                <li> Mongo </li>
-                                <li> Firebase </li>
-                            </ul>
+<pre><code class="language-json">{
+  "mongo": {
+    "$exists": true
+  },
+  "sql": "SELECT * FROM web",
+  "firebase": "observe..."
+}</code></pre>
                         </div>
                     </div>
                 </div>
@@ -142,12 +149,18 @@
                             <span class="segment__caret"> > </span>
                         </div>
                         <div class="segment__container">
-                            <ul class="segment__list">
-                                <li> Webpack </li>
-                                <li> Grunt </li>
-                                <li> Yarn </li>
-                                <li> Penetration Testing</li>
-                            </ul>
+<pre><code class="language-git">git status
+On branch developerSkills
+Your branch is up-to-date with 'the web'.
+git diff
++++ webpack
++++ yarn
++++ git
++++ grunt
++++ penetration testing
+--- hassle
+--- wasted time
+</code></pre>
                         </div>
                     </div>
                     <div class="segment segment--open">
@@ -156,11 +169,16 @@
                             <span class="segment__caret"> > </span>
                         </div>
                         <div class="segment__container">
-                            <ul class="segment__list">
-                                <li> Stripe </li>
-                                <li> SendGrid </li>
-                                <li> Box </li>
-                            </ul>
+<pre><code class="language-typescript">let APIs = [
+  'stripe', 'sendgrid', 'box', 'auth0'
+];
+
+
+APIs.forEach( API => {
+  addedValue += fetch(API);
+});
+
+APIs.push(moreExperience);</code></pre>
                         </div>
                     </div>
                 </div>
@@ -194,6 +212,17 @@
                             Student meets tutor. An intuitive app based tool for tutoring built on Ionic (v2) and Angular (v2)
                         </p>
                     </div>
+                    <div class="project">
+                        <div class="project__logo-container">
+                            <img class="project__logo" src="./assets/451.png" alt="CPI">
+                        </div>
+                        <h3 class="project__name">
+                            Cloud Price Index
+                        </h3>
+                        <p class="project__description">
+                            A UI-rich interface providing quick and insightful comparisons. Build using Angular (v2), Koa.js and SQL.   
+                        </p>
+                    </div>
                     <div class="project project--speculative">
                         <h3 class="project__name">
                             Your project here...
@@ -222,26 +251,15 @@
                     </div>
                     <div class="contact__option">
                         Email:&nbsp;
-                        <a href="mailto:gforster1993@gmail.com">
-                        gforster1993@gmail.com
+                        <a href="mailto:gary@garyforster.io">
+                        gary@garyforster.io
                     </a>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-89242477-1', 'auto');
-            ga('send', 'pageview');
-
-        </script>
-
+        <script src="./index.js"></script>
+        <script src="./dist/prism.js"></script>
 </body>
 
 </html>
