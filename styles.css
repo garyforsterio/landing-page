@@ -86,6 +86,10 @@ body {
     div.segment__container {
       font-size: initial;
     }
+    .segment:not(:last-child) {
+      margin-right: 2vw;
+    }
+}
 }
 
 .splash__subtitle {
@@ -135,27 +139,38 @@ body {
 
 .segment {
     flex: 1;
-    margin-right: 1vw;
 }
-.segment--open .segment__caret {
-  transform: none;
-}
-.segment--open .segment__container {
-  display: block;
+
+.segment--open .segment__container pre[class*="language-"] {
+  transition: max-height 1s linear;
+  max-height: 1000px;
+  padding: 1em;
 }
 
 .segment__container {
   font-size: 2.5vw;
-  display: none;
+}
+
+.segment__container pre[class*="language-"] {
+  transition: padding 0s linear 1s, max-height 1s linear;
+  max-height: 0;
+  overflow: hidden !important;
+  padding: 0;
 }
 
 .segment__title {
     font-size: 3vw;
 }
 
-.segment__caret {
-  transform: rotate(90deg);  
+.segment__actions {
   float: right;
+  padding: 0 5px;
+}
+
+.segment__toggle {
+  cursor: pointer;
+  font-size: 2vw;
+  color: #bfbfbf;
 }
 
 
@@ -182,6 +197,10 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.projects__title {
+  margin-top: 15vw;
 }
 
 .project__logo-container {

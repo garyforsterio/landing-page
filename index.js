@@ -17,13 +17,15 @@
     }
 
     function toggleOpenedSegment() {
-        console.log(this);
+        var caret = this.getElementsByClassName('segment__toggle')[0];
         var classString = this.className;
         var newClass;
         if (classString.indexOf('segment--open') > -1) {
             newClass = classString.replace(' segment--open', '');
+            caret.innerHTML = 'menu';
         } else {
             newClass = classString.concat(' segment--open');
+            caret.innerHTML = 'clear';
         }
         this.className = newClass;
     }

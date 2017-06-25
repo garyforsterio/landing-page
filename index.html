@@ -76,10 +76,12 @@
             </h2>
             <div class="stack__container">
                 <div class="stack__block">
-                    <div class="segment segment--open">
+                    <div class="segment">
                         <div class="segment__title">
                             Scripting
-                            <span class="segment__caret"> > </span>
+                            <span class="segment__actions">
+                                <i class="segment__toggle material-icons">menu</i>
+                            </span>
                         </div>
                         <div class="segment__container">
 <pre><code class="language-typescript">export class myKnowledge {
@@ -94,10 +96,12 @@
 }</code></pre>
                         </div>
                     </div>
-                    <div class="segment segment--open">
+                    <div class="segment">
                         <div class="segment__title">
                             Templating
-                            <span class="segment__caret"> > </span>
+                            <span class="segment__actions">
+                                <i class="segment__toggle material-icons">menu</i>
+                            </span>
                         </div>
                         <div class="segment__container">
 <pre><code class="language-markup">&lt;head>
@@ -111,10 +115,12 @@
                     </div>
                 </div>
                 <div class="stack__block">
-                    <div class="segment segment--open">
+                    <div class="segment">
                         <div class="segment__title">
                             Styling
-                            <span class="segment__caret"> > </span>
+                            <span class="segment__actions">
+                                <i class="segment__toggle material-icons">menu</i>
+                            </span>
                         </div>
                             <div class="segment__container">
 <pre><code class="language-css">.advanced__class {
@@ -126,10 +132,12 @@
 }</code></pre>
                         </div>
                     </div>
-                    <div class="segment segment--open">
+                    <div class="segment">
                         <div class="segment__title">
                             Storing
-                            <span class="segment__caret"> > </span>
+                            <span class="segment__actions">
+                                <i class="segment__toggle material-icons">menu</i>
+                            </span>
                         </div>
                         <div class="segment__container">
 <pre><code class="language-json">{
@@ -143,10 +151,12 @@
                     </div>
                 </div>
                 <div class="stack__block">
-                    <div class="segment segment--open">
+                    <div class="segment">
                         <div class="segment__title">
                             Developing
-                            <span class="segment__caret"> > </span>
+                            <span class="segment__actions">
+                                <i class="segment__toggle material-icons">menu</i>
+                            </span>
                         </div>
                         <div class="segment__container">
 <pre><code class="language-git">git status
@@ -163,10 +173,12 @@ git diff
 </code></pre>
                         </div>
                     </div>
-                    <div class="segment segment--open">
+                    <div class="segment">
                         <div class="segment__title">
                             Transactioning
-                            <span class="segment__caret"> > </span>
+                            <span class="segment__actions">
+                                <i class="segment__toggle material-icons">menu</i>
+                            </span>
                         </div>
                         <div class="segment__container">
 <pre><code class="language-typescript">let APIs = [
@@ -184,82 +196,81 @@ APIs.push(moreExperience);</code></pre>
                 </div>
             </div>
         </div>
-        <div class="tile projects">
-            <div class="tile__pad">
-                <h2 class="projects__title tile__text">
-                    My Projects...
-                </h2>
-                <div class="projects__container">
-                    <div class="project">
-                        <div class="project__logo-container">
-                            <img class="project__logo" src="./assets/animus.png" alt="animus">
-                        </div>
-                        <h3 class="project__name">
-                            Animus Technology
-                        </h3>
-                        <p class="project__description">
-                            A highly modular and complex integration platform. Built on a MEAN stack orientated towards making data accessible.
-                        </p>
+    </div>
+    <div class="tile projects">
+        <div class="tile__pad">
+            <h2 class="projects__title tile__text">
+                My Projects...
+            </h2>
+            <div class="projects__container">
+                <div class="project">
+                    <div class="project__logo-container">
+                        <img class="project__logo" src="./assets/animus.png" alt="animus">
                     </div>
-                    <div class="project">
-                        <div class="project__logo-container">
-                            <img class="project__logo" src="./assets/tuto.png" alt="animus">
-                        </div>
-                        <h3 class="project__name">
-                            Tuto
-                        </h3>
-                        <p class="project__description">
-                            Student meets tutor. An intuitive app based tool for tutoring built on Ionic (v2) and Angular (v2)
-                        </p>
+                    <h3 class="project__name">
+                        Animus Technology
+                    </h3>
+                    <p class="project__description">
+                        A highly modular and complex integration platform. Built on a MEAN stack orientated towards making data accessible.
+                    </p>
+                </div>
+                <div class="project">
+                    <div class="project__logo-container">
+                        <img class="project__logo" src="./assets/tuto.png" alt="animus">
                     </div>
-                    <div class="project">
-                        <div class="project__logo-container">
-                            <img class="project__logo" src="./assets/451.png" alt="CPI">
-                        </div>
-                        <h3 class="project__name">
-                            Cloud Price Index
-                        </h3>
-                        <p class="project__description">
-                            A UI-rich interface providing quick and insightful comparisons. Build using Angular (v2), Koa.js and SQL.   
-                        </p>
+                    <h3 class="project__name">
+                        Tuto
+                    </h3>
+                    <p class="project__description">
+                        Student meets tutor. An intuitive app based tool for tutoring built on Ionic (v2) and Angular (v2)
+                    </p>
+                </div>
+                <div class="project">
+                    <div class="project__logo-container">
+                        <img class="project__logo" src="./assets/451.png" alt="CPI">
                     </div>
-                    <div class="project project--speculative">
-                        <h3 class="project__name">
-                            Your project here...
-                        </h3>
-                    </div>
+                    <h3 class="project__name">
+                        Cloud Price Index
+                    </h3>
+                    <p class="project__description">
+                        A UI-rich interface providing quick and insightful comparisons. Build using Angular (v2), Koa.js and SQL.   
+                    </p>
+                </div>
+                <div class="project project--speculative">
+                    <h3 class="project__name">
+                        Your project here...
+                    </h3>
                 </div>
             </div>
         </div>
-        <!--<div class="tile testimonials">
-    </div>-->
-        <div class="tile contact">
-            <p> </p>
-            <div class="tile__center">
-                <i class="material-icons contact__icon">place</i>
-                <p class="contact__place">
-                    Bristol, UK
-                </p>
-            </div>
-            <div class="tile__pad">
-                <div class="contact__via">
-                    <div class="contact__option">
-                        Tel:&nbsp;
-                        <a href="tel:07411115783">
-                        07411115783
-                    </a>
-                    </div>
-                    <div class="contact__option">
-                        Email:&nbsp;
-                        <a href="mailto:gary@garyforster.io">
-                        gary@garyforster.io
-                    </a>
-                    </div>
+    </div>
+    <div class="tile contact">
+        <p> </p>
+        <div class="tile__center">
+            <i class="material-icons contact__icon">place</i>
+            <p class="contact__place">
+                Bristol, UK
+            </p>
+        </div>
+        <div class="tile__pad">
+            <div class="contact__via">
+                <div class="contact__option">
+                    Tel:&nbsp;
+                    <a href="tel:07411115783">
+                    07411115783
+                </a>
+                </div>
+                <div class="contact__option">
+                    Email:&nbsp;
+                    <a href="mailto:gary@garyforster.io">
+                    gary@garyforster.io
+                </a>
                 </div>
             </div>
         </div>
-        <script src="./index.js"></script>
-        <script src="./dist/prism.js"></script>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./dist/prism.js"></script>
 </body>
 
 </html>
