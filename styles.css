@@ -51,21 +51,11 @@ body {
     p.splash__subtitle, p.not-found__return {
         font-size: 2vw;
     }
-    div.project {
-
-    }
-    p.project__description {
-    }
-    h3.project__name {
-    }
     *.tile__text {
       font-size: 4vw;
     }
     div.contact__option {
       font-size: 2vw;
-    }
-    div.projects__container {
-      flex-direction: row;
     }
     i.contact__icon {
       font-size: 8vw;
@@ -73,17 +63,20 @@ body {
     p.contact__place {
       font-size: 3vw;
     }
-    div.stack__block {
-      display: flex;
-    }
     div.segment__container {
       font-size: initial;
+    }
+}
+
+@media(min-width: 992px) {
+    div.stack__block {
+      display: flex;
     }
     .segment:not(:last-child) {
       margin-right: 2vw;
     }
 }
-}
+
 
 .splash__subtitle {
     font-size: 3vw;
@@ -182,13 +175,14 @@ body {
   margin: 30px;
   height: 370px;
   padding: 20px;
+  min-width: 280px;
 }
 
 .projects__container {
-  flex-direction: column;
   display: flex;
   background: #bfbfbf;
   padding: 30px;
+  overflow-x: auto;
 }
 
 .projects__title {
