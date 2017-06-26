@@ -10,6 +10,7 @@
     ga('create', 'UA-89242477-1', 'auto');
     ga('send', 'pageview');
 
+    //Stack
     var segments = document.getElementsByClassName('segment');
 
     for (var i = 0; i < segments.length; i++) {
@@ -28,5 +29,18 @@
             caret.innerHTML = 'clear';
         }
         this.className = newClass;
+    }
+
+    //Map
+    var mapToggle = document.getElementsByClassName('map__toggle')[0];
+    mapToggle.onclick = function() {
+        var elem = this;
+        var map = document.getElementsByClassName('contact__map')[0];
+        map.classList.toggle('displayNone');
+        elem.classList.toggle('displayNone');
+
+        setTimeout(function() {
+            map.classList.toggle('contact__map--hidden');
+        }, 500);
     }
 })();

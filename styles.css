@@ -54,6 +54,15 @@ body {
     *.tile__text {
       font-size: 4vw;
     }
+    div.segment__title {
+      font-size: 3vw;
+    }
+    i.segment__toggle {
+      font-size: 2vw;
+    }
+    div.segment__container {
+      font-size: 2.5vw;
+    }
     div.contact__option {
       font-size: 2vw;
     }
@@ -62,6 +71,14 @@ body {
     }
     p.contact__place {
       font-size: 3vw;
+    }
+    div.contact__map {
+      width: 600px;
+      height: 600px;
+    }
+    iframe.contact__frame {
+      left: 0;
+      top: 0;
     }
     div.segment__container {
       font-size: initial;
@@ -134,7 +151,7 @@ body {
 }
 
 .segment__container {
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 
 .segment__container pre[class*="language-"] {
@@ -145,7 +162,7 @@ body {
 }
 
 .segment__title {
-    font-size: 3vw;
+    font-size: 5vw;
 }
 
 .segment__actions {
@@ -155,7 +172,7 @@ body {
 
 .segment__toggle {
   cursor: pointer;
-  font-size: 2vw;
+  font-size: 4vw;
   color: #bfbfbf;
 }
 
@@ -176,13 +193,20 @@ body {
   height: 370px;
   padding: 20px;
   min-width: 280px;
+  text-decoration: none;
+  color: initial;
 }
 
 .projects__container {
-  display: flex;
   background: #bfbfbf;
-  padding: 30px;
+  padding: 30px 0;
   overflow-x: auto;
+}
+
+.projects__carousel {
+  display: flex;
+  min-width: 1360PX;
+  padding: 0 30px;
 }
 
 .projects__title {
@@ -231,10 +255,47 @@ body {
 /* Contact */
 .tile.contact {
   justify-content: space-around;
+  position: relative;
 }
 
 .contact__place {
   font-size: 8vw;
+}
+
+.contact__map {
+  border-radius: 300px;
+  overflow: hidden;
+  transition: all 2s;
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
+.contact__frame {
+  transition: all 2s;
+  position: relative;
+  top: -150px;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+}
+
+.contact__map.contact__map--hidden {
+  width: 0;
+  height: 0;
+}
+
+.contact__map--hidden .contact__frame {
+  left: -300px;
+  top: -300px;
+} 
+
+.displayNone {
+  display: none;
+}
+
+.map__toggle {
+  cursor: pointer;
 }
 
 .contact__icon {
@@ -255,6 +316,13 @@ body {
 .contact__option a {
     text-decoration: initial;
     color: initial;
+}
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
 }
 
 .swing div {
