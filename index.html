@@ -87,10 +87,14 @@
 <pre><code class="language-typescript">export class myKnowledge {
   javaScript = es6+;
   typeScript: IExperienced;
+  java;
   node.js;
-  angular;
   react;
+  angular;
   express.js;
+  mapping() {
+    return [openlayers, postgis];   
+  }
   charting() {
     return [d3, dc.js, highcharts];
   }
@@ -146,6 +150,8 @@
     "$exists": true
   },
   "sql": "SELECT * FROM web",
+  "postgres": "SELECT ST_AsText(road_to_success_geom)
+    AS option FROM candidates",
   "firebase": "observe..."
 }</code></pre>
                         </div>
@@ -168,6 +174,7 @@ git diff
 +++ yarn
 +++ git
 +++ grunt
++++ docker
 +++ penetration testing
 --- hassle
 --- wasted time
@@ -253,7 +260,20 @@ APIs.push(moreExperience);</code></pre>
                         </h3>
                     </div>
                     <p class="project__description">
-                        An multi-tenancy mapping solution utilising OpenLayers to provide 'living' maps. Extensive use of the React ecosystem.   
+                        An multi-tenancy mapping solution utilising OpenLayers to provide 'living' maps. Extensive use of the React ecosystem, Scala and the Play framework.
+                    </p>
+                </a>
+                <a class="project" href="https://livingmap.com/" target="_blank">
+                    <div class="project__header">                
+                        <div class="project__logo-container">
+                            <img class="project__logo" src="./assets/livingmap.png" alt="Living Map">
+                        </div>
+                        <h3 class="project__name">
+                            Living Map
+                        </h3>
+                    </div>
+                    <p class="project__description">
+                        An multi-tenancy mapping solution utilising OpenLayers to provide 'living' maps. Extensive use of the React ecosystem, Scala and the Play framework.
                     </p>
                 </a>
             </div>
