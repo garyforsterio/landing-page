@@ -47,7 +47,7 @@ body {
 /*Splash Tile*/
 .splash__title {
     text-transform: uppercase;
-    font-weight: initial;
+    font-weight: normal;
     font-size: 10vw;
     margin: 0 0 10px;
 }
@@ -178,14 +178,6 @@ body {
   color: #bfbfbf;
 }
 
-
-.segment__list {
-    color: #028482;
-}
-.segment__list span {
-  color: initial;
-}
-
 /*Projects*/
 .project {
   background: white;
@@ -196,7 +188,7 @@ body {
   padding: 20px;
   min-width: 280px;
   text-decoration: none;
-  color: initial;
+  color: black;
 }
 
 .projects__container {
@@ -316,8 +308,8 @@ body {
 }
 
 .contact__option a {
-    text-decoration: initial;
-    color: initial;
+    text-decoration: none;
+    color: black;
 }
 
 .footer {
