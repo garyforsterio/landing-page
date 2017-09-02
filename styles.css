@@ -15,6 +15,11 @@ body {
   margin: 0;
 }
 
+/* IE 11 Flex height fix */
+.splash, .brief, .contact {
+  height: 1px;
+}
+
 
 /*Full height tile*/
 .tile {
@@ -60,9 +65,6 @@ body {
     i.segment__toggle {
       font-size: 2vw;
     }
-    div.segment__container {
-      font-size: 2.5vw;
-    }
     div.contact__option {
       font-size: 2vw;
     }
@@ -81,7 +83,7 @@ body {
       top: 0;
     }
     div.segment__container {
-      font-size: initial;
+      font-size: medium;
     }
 }
 
