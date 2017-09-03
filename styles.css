@@ -72,7 +72,7 @@ body {
       font-size: 2vw;
     }
     div.contact__option:nth-of-type(2) {
-      order: unset;
+      order: 0;
     }
     div.contact__option img {
       height: 2vw;
