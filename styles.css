@@ -94,6 +94,9 @@ body {
     div.segment__container {
       font-size: medium;
     }
+    div.projects__carousel {
+      padding: 0 30px;
+    }
 }
 
 @media(min-width: 992px) {
@@ -195,7 +198,6 @@ body {
   margin: 30px;
   height: 370px;
   padding: 20px;
-  min-width: 280px;
   text-decoration: none;
   color: black;
 }
@@ -208,8 +210,7 @@ body {
 
 .projects__carousel {
   display: flex;
-  min-width: 1800PX;
-  padding: 0 30px;
+  width: 2100PX;
 }
 
 .projects__title {
