@@ -1,0 +1,19 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Gary Forster's Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "aws s3 sync --delete ./public s3://www.garyforster.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garyforsterio/landing-page.git"
+  },
+  "author": "Gary Forster <gary@garyforster.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garyforsterio/landing-page/issues"
+  },
+  "homepage": "https://www.garyforster.io"
+}
