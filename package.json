@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "parcel ./public/index.html",
+    "dev": "parcel ./src/*.html",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write \"src/**/*.{css,js,json,jsx,md,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{css,js,json,md,ts,html}\"",
     "prebuild": "rm -rf dist",
-    "build": "parcel build ./src/index.html ./src/404.html",
+    "build": "parcel build ./src/*.html",
     "serve": "serve dist",
     "deploy": "aws s3 sync --delete ./public s3://www.garyforster.io"
   },
@@ -35,5 +35,6 @@
     "prettier": "^2.0.2",
     "serve": "^11.3.0",
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {}
 }

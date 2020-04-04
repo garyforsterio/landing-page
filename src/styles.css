@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-html {
-  --screen-xs-max: 767px;
-  --screen-sm-min: 768px;
-  --screen-sm-max: 991px;
-  --screen-md-min: 992px;
-  --screen-md-max: 1199px;
-  --screen-lg-min: 1200px;
-}
-
 body {
   font-family: 'Lato', monospace;
   margin: 0;
@@ -169,7 +160,7 @@ body {
 }
 
 .segment__container pre[class*='language-'] {
-  transition: padding 0s linear 1s, max-height 1s linear;
+  transition: padding 0s linear 0.2s, max-height 0.2s linear;
   max-height: 0;
   overflow: hidden !important;
   padding: 0;
@@ -177,11 +168,16 @@ body {
 
 .segment__title {
   font-size: 5vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 .segment__actions {
-  float: right;
   padding: 0 5px;
+  transition: transform 0.2s linear;
+}
+.segment--open .segment__actions {
+  transform: rotateZ(-180deg);
 }
 
 .segment__toggle {
@@ -283,22 +279,26 @@ body {
   height: 600px;
 }
 
-.contact__map.contact__map--hidden {
+.contact__map.contact__map--minimized {
   width: 0;
   height: 0;
 }
 
-.contact__map--hidden .contact__frame {
+.contact__map--minimized .contact__frame {
   left: -300px;
   top: -300px;
 }
 
-.displayNone {
+.contact__map--hidden {
   display: none;
 }
 
-.map__toggle {
+.map__icon {
   cursor: pointer;
+}
+
+.map__icon--hidden {
+  display: none;
 }
 
 .contact__icon {
@@ -340,6 +340,8 @@ body {
   right: 0;
 }
 
+/* Netwon's Cradle animation */
+
 .swing div {
   border-radius: 50%;
   float: left;
@@ -360,121 +362,105 @@ body {
   border-radius: 50%;
   background: #e3dbd2;
 }
-.shadow .shadow-l {
+.shadow .shadow__left {
   background: #d5d8d6;
 }
-.shadow .shadow-r {
+.shadow .shadow__right {
   background: #eed3ca;
 }
-@-webkit-keyframes ball-l {
+@-webkit-keyframes ball__left {
   0%,
   50% {
-    -webkit-transform: rotate(0) translateX(0);
     transform: rotate(0) translateX(0);
   }
   100% {
-    -webkit-transform: rotate(50deg) translateX(-2.5em);
     transform: rotate(50deg) translateX(-2.5em);
   }
 }
-@keyframes ball-l {
+@keyframes ball__left {
   0%,
   50% {
-    -webkit-transform: rotate(0) translate(0);
     transform: rotate(0) translateX(0);
   }
   100% {
-    -webkit-transform: rotate(50deg) translateX(-2.5em);
     transform: rotate(50deg) translateX(-2.5em);
   }
 }
-@-webkit-keyframes ball-r {
+@-webkit-keyframes ball__right {
   0% {
-    -webkit-transform: rotate(-50deg) translateX(2.5em);
     transform: rotate(-50deg) translateX(2.5em);
   }
   50%,
   100% {
-    -webkit-transform: rotate(0) translateX(0);
     transform: rotate(0) translateX(0);
   }
 }
-@keyframes ball-r {
+@keyframes ball__right {
   0% {
-    -webkit-transform: rotate(-50deg) translateX(2.5em);
     transform: rotate(-50deg) translateX(2.5em);
   }
   50%,
   100% {
-    -webkit-transform: rotate(0) translateX(0);
     transform: rotate(0) translateX(0);
   }
 }
-@-webkit-keyframes shadow-l-n {
+@-webkit-keyframes shadow__left-n {
   0%,
   50% {
     opacity: 0.5;
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
     opacity: 0.125;
-    -webkit-transform: translateX(-1.57em);
     transform: translateX(-1.75em);
   }
 }
-@keyframes shadow-l-n {
+@keyframes shadow__left-n {
   0%,
   50% {
     opacity: 0.5;
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
     opacity: 0.125;
-    -webkit-transform: translateX(-1.75);
     transform: translateX(-1.75em);
   }
 }
-@-webkit-keyframes shadow-r-n {
+@-webkit-keyframes shadow__right-n {
   0% {
     opacity: 0.125;
-    -webkit-transform: translateX(1.75em);
     transform: translateX(1.75em);
   }
   50%,
   100% {
     opacity: 0.5;
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
-@keyframes shadow-r-n {
+@keyframes shadow__right-n {
   0% {
     opacity: 0.125;
-    -webkit-transform: translateX(1.75em);
     transform: translateX(1.75em);
   }
   50%,
   100% {
     opacity: 0.5;
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
-.swing-l {
-  -webkit-animation: ball-l 0.425s ease-in-out infinite alternate;
-  animation: ball-l 0.425s ease-in-out infinite alternate;
+.swimg__left {
+  -webkit-animation: ball__left 0.425s ease-in-out infinite alternate;
+  animation: ball__left 0.425s ease-in-out infinite alternate;
 }
-.swing-r {
-  -webkit-animation: ball-r 0.425s ease-in-out infinite alternate;
-  animation: ball-r 0.425s ease-in-out infinite alternate;
+.swimg__right {
+  -webkit-animation: ball__right 0.425s ease-in-out infinite alternate;
+  animation: ball__right 0.425s ease-in-out infinite alternate;
 }
-.shadow-l {
-  -webkit-animation: shadow-l-n 0.425s ease-in-out infinite alternate;
-  animation: shadow-l-n 0.425s ease-in-out infinite alternate;
+.shadow__left {
+  -webkit-animation: shadow__left-n 0.425s ease-in-out infinite alternate;
+  animation: shadow__left-n 0.425s ease-in-out infinite alternate;
 }
-.shadow-r {
-  -webkit-animation: shadow-r-n 0.425s ease-in-out infinite alternate;
-  animation: shadow-r-n 0.425s ease-in-out infinite alternate;
+.shadow__right {
+  -webkit-animation: shadow__right-n 0.425s ease-in-out infinite alternate;
+  animation: shadow__right-n 0.425s ease-in-out infinite alternate;
 }
