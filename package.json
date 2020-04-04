@@ -6,7 +6,10 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "parcel ./public/index.html",
-    "build": "parcel build ./public/index.html",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write \"src/**/*.{css,js,json,jsx,md,ts,tsx}\"",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build ./src/index.html ./src/404.html",
     "serve": "serve dist",
     "deploy": "aws s3 sync --delete ./public s3://www.garyforster.io"
   },
@@ -21,7 +24,16 @@
   },
   "homepage": "https://www.garyforster.io",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-simple-import-sort": "^5.0.2",
     "parcel-bundler": "^1.12.4",
-    "serve": "^11.3.0"
+    "prettier": "^2.0.2",
+    "serve": "^11.3.0",
+    "typescript": "^3.8.3"
   }
 }
