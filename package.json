@@ -10,8 +10,10 @@
     "format": "prettier --write \"src/**/*.{css,js,json,md,ts,html}\"",
     "prebuild": "rm -rf dist",
     "build": "parcel build ./src/*.html",
+    "postbuild": "npm run copy-static-files",
+    "copy-static-files": "cp -a static/. dist/",
     "serve": "serve dist",
-    "deploy": "aws s3 sync --delete ./public s3://www.garyforster.io"
+    "deploy": "aws s3 sync --profile gary --delete ./dist s3://www.garyforster.io"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/garyforsterio/landing-page/issues"
+  },
+  "sitemap": {
+    "siteURL": "https://www.garyforster.io/"
   },
   "homepage": "https://www.garyforster.io",
   "devDependencies": {
