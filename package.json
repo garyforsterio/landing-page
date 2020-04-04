@@ -4,6 +4,10 @@
   "description": "Gary Forster's Landing Page",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html",
+    "serve": "serve dist",
     "deploy": "aws s3 sync --delete ./public s3://www.garyforster.io"
   },
   "repository": {
@@ -15,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/garyforsterio/landing-page/issues"
   },
-  "homepage": "https://www.garyforster.io"
+  "homepage": "https://www.garyforster.io",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "serve": "^11.3.0"
+  }
 }
